@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "title": {
+    "en": "ChatGPT Plus for DeepSeek Harness",
+    "zh": "DeepSeek Harness 的 ChatGPT Plus"
+  },
+  "description": {
+    "en": "Sign in with a ChatGPT subscription and read the remaining Codex quota.",
+    "zh": "登录 ChatGPT 订阅账号，并查看 Codex 剩余额度。"
+  },
+  "metadata": {
+    "categories": {
+      "productivity": {
+        "title": {
+          "en": "Productivity",
+          "zh": "效率"
+        }
+      }
+    },
+    "labels": {
+      "chatgpt": {
+        "title": {
+          "en": "ChatGPT",
+          "zh": "ChatGPT"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-chatgpt-plus",
+      "title": {
+        "en": "ChatGPT account & quota",
+        "zh": "ChatGPT 登录与额度"
+      },
+      "description": {
+        "en": "ChatGPT Plus / Pro sign-in for the built-in openai-codex route, plus remaining subscription quota with reset times. Read-only quota, no session or tool-policy changes.",
+        "zh": "为内置 openai-codex 路由提供 ChatGPT Plus / Pro 登录，并显示剩余订阅额度与重置时间。额度只读，不改变会话或工具策略。"
+      },
+      "icon": "../icon.svg",
+      "author": "poetkefan",
+      "homepage": "https://github.com/poetkefan/dsh-chatgpt-plus",
+      "repository": {
+        "url": "https://github.com/poetkefan/dsh-chatgpt-plus"
+      },
+      "metadata": {
+        "category": "productivity",
+        "labels": [
+          "chatgpt"
+        ],
+        "keywords": [
+          "chatgpt",
+          "openai",
+          "quota",
+          "codex",
+          "oauth"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.2.0",
+          "publishTimestamp": 1792553298,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/poetkefan/dsh-chatgpt-plus",
+            "commit": "6d05232e8810e6502d083ff8dbeb20baf5558cb9"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.3.0"
+          }
+        }
+      ]
+    }
+  ]
+}
