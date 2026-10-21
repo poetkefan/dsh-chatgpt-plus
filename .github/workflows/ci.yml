@@ -1,0 +1,35 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Enable pnpm
+        run: corepack enable
+      - name: Install dependencies
+        run: pnpm install --ignore-scripts
+      - name: Syntax check
+        run: pnpm run check
+      - name: Tests
+        run: pnpm test
+      - name: Validate market index when present
+        run: |
+          if [ -f market/index.json ]; then
+            node -e "const i=require('./market/index.json'); if(i.format!==1||!i.plugins||!i.plugins.length) throw new Error('invalid market index'); console.log('market index shape ok')"
+          fi

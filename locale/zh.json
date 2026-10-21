@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "ChatGPT · 登录与额度",
+    "description": "保留 ChatGPT 账号登录与模型接入，查看 Codex 剩余额度及重置时间，不改变工具权限或会话行为。"
+  }
+}
